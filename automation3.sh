@@ -6,7 +6,7 @@ do
     MAX=2
     echo $line
     echo $COUNT
-    if [ $COUNT > $MAX ];
+    if [ $COUNT -gt $MAX ];
     then
       echo $line
       PROCS=`ps -ef| grep $line | grep -v grep | awk '{print $2, $11, $12, $13}' | sort -k 4`
